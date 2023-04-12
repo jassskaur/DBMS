@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 60px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display:block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  justify-content:center;
+  font-size: 25px;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 50px;
+}
+.main h2{align-items: center;
+  justify-content: center;
+  width: 600px;
+  height:fit-content;
+  border: 2px solid black;
+  box-shadow: 5px 5px gray;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:25px;
+    font-weight:none;
+    text-align: center;display: flex;
+-moz-box-align: center; }
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.header {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      background-color:aliceblue;
+      width:100%;
+      height:70px;
+      
+    }.header.intro2 h1 {
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      background-color:#000;
+      width:90%;
+      height:60px;
+      font-size: small;
+      position: relative;
+      text-align: center;
+      
+    }
+    
+
+    .header .logo {
+      font-size: 90px;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: #000;
+      text-decoration: none;
+      
+    }
+
+
+
+
+
+    .container {
+  padding: 64px;
+ 
+  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow:#000;
+  padding: 16px;
+  text-align: center;
+ color: #ddd;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float:none;
+  width:100%;
+  padding:fit-content;
+  height: 100%;
+  background-color: #000;
+}
+
+/* Clear floats after the columns 
+.row{
+  content: "";
+  display: table;
+  clear: both;
+}
+ */
+
+
+ .column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }}
+
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: center;
+  width: 150%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  height:fit-content;
+  align-items: center;
+  
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.ashname{
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  text-align: center;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+
+.footer .social p{
+  display:contents;
+}
+
+
+
+footer{
+  display:flex;
+	position:none;
+	bottom: 0;
+	border-style: solid;
+    border-color:white;
+    border-width: 2px;
+}
+.footer{
+	
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+ 
+	padding: 55px 55px;
+	margin-top: 3px;
+}
+
+
+
+.footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ .footer-left{
+	width: 40%;
+	line-height:none;
+}
+ 
+.footer-left h4{
+font-size:20px ;
+ font-family:Arial, Helvetica, sans-serif;
+ color:#000;
+}
+.fotter h3{
+	color:#000;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+.footer h3 span{
+	color:#000;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+ 
+.footer .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer.footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+ 
+.footer.footer-center{
+	width: 35%;
+}
+ 
+.footer.footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer.footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer.footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer.footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+ 
+.footer .footer-right{
+	width: 20%;
+}
+ 
+.footer.footer-company-about{
+	line-height: 20px;
+	color:#5383d3;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+	font-family: cursive;
+}
+ 
+.footer.footer-company-about span{
+	display: block;
+	color:#5383d3;
+	font-size: 25px;
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+ 
+.footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:#fff;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed{
+		font: bold 14px sans-serif;
+ 
+	}
+ 
+	.footer .footer-left,
+	.footer-center,
+	.footer.footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+ 
+}
+a.hover{
+	color: #33383b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<script>
+
+
+
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++)
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+
+
+
+</script>
+</head>
+<body>
+
+<div class="header" style="background-color:ghostwhite"><a href="#" class="logo">
+    <div class="intro2">
+        <h1 >
+        <span >DATA  </span>   <span >MODE</span>
+    
+  </h1></div>
+</div>
+
+<div class="navbar" style="background-color:#000;">
+    <a href=""style="font-size:25PX;">SQL</a>
+  <a href="#"style="font-size:25PX;">PLSQL</a>
+  
+  <a href="jashome.html" class="right" class="active"style="font-size:25PX;"><span >Home</span></a>
+</div>
+
+
+ 
+</div>
+<div >
+    
+    
+  </div >
+  
+
+
+  <!-- Clarity Section -->
+
+      
+      
+      
+      
+      <div class="container">
+        
+          <div class="column-66">
+            <h1 class="h1">QUERY:1.How we can see existing database in mysql.</h1><BR>
+                <img src="Q1.png"><BR>
+                    
+                    <h1 class="h1">QUERY:2.How we can create database.</h1><BR>
+                        <img src="Q2.png"><BR>
+      
+                            
+                            <h1 class="h1">QUERY:3.How we can delete a database.</h1><BR>
+                            <img src="Q3.png"><BR>
+    
+                                <h1 class="h1">QUERY:4.How we can use an existing database.</h1><BR>
+                                    <img src="Q4.png"><BR>
+                                        
+                                        <h1 class="h1">QUERY:5.How we can create table in the database.</h1><BR>
+                                            <img src="Q5.png"><BR>                
+                      
+                                                <h1 class="h1">QUERY:6.How we can see the structure of existing table.
+                                                </h1><BR>
+                                                    <img src="Q6.png"><BR>                
+      
+                                                        <h1 class="h1">QUERY:7.How we can delete a table.</h1><BR>
+                                                            <img src="Q7.png"><BR>                
+      
+                                                                <h1 class="h1">QUERY:8.How we can insert data in the table.</h1><BR>
+                                                                    <img src="Q8.png"><BR>     
+                                                                        
+                                                                        <h1 class="h1">QUERY:9.How we can delete all the data of the table.</h1><BR>
+                                                                            <img src="Q9.png"><BR>     
+    
+                                                     <h1 class="h1">QUERY:10.To delete all the rows from the table we can use a DDL command also.</h1><BR>
+                                                       <img src="Q10.png"><BR>     
+    
+                                                                                        <h1 class="h1">QUERY:11.How we can update the data of the table.</h1><BR>
+                                                                                            <img src="Q11.png"><BR>     
+    
+                                                                                                <h1 class="h1">QUERY:12.How we can select and extract data from table (all column & all rows).</h1><BR>
+                                                                                                    <img src="Q12.png"><BR>     
+    
+                                                                                                        <h1 class="h1">QUERY:13.To see selective column of the table (specific column,all rows).</h1><BR>
+                                                                                                            <img src="Q13.png"><BR>     
+    
+                                                                                                                <h1 class="h1">QUERY:14.Find the record of the student whose roll in(1,3,4).</h1><BR>
+                                                                                                                    <img src="Q14.png"><BR>     
+    
+                                                                                                                        <h1 class="h1">QUERY:15.Find out the record of thr student whose name is start with A.</h1><BR>
+                                                                                                                            <img src="Q15.png"><BR>     
+    
+                                                                                                                                <h1 class="h1">QUERY:16.To create a table from another table we will use the create command with select command.</h1><BR>
+                                                                                                                                    <img src="Q16.png"><BR>     
+    
+    
+                                                                                                                                        
+                                                                                                                                <h1 class="h1">QUERY:17.How we can sort the data of table.</h1><BR>
+                                                                                                                                    <img src="Q17.png"><BR>     
+                              
+    
+                                                                                                                                        
+                                                                                                                                <h1 class="h1">QUERY:18.Find out the name of the student who is having maximum marks.
+                                                                                                                                </h1><BR>
+                                                                                                                                    <img src="Q18.png"><BR>     
+                              
+                                                                                                                                        
+                                                                                                                                <h1 class="h1">QUERY:19.How we ccan see existing tables in database.</h1><BR>
+                                                                                                                                    <img src="Q19.png"><BR>     
+                                                                                                                                        <h1 class="h1">QUERY:20. Find the record of the student table whose name contain null values.</h1><BR>
+                                                                                                                                            <img src="Q20.png"><BR>     
+                                      
+                                                                       
+            
+              </div></div>
+      
+             
+            
+
+      
+              
+            
+
+
+
+
+
+
+
+
+
+
+
+  
+
+      
+      
+      
+  
+ 
+
+           
+   <footer >          
+              
+
+
+
+
+      
+  
+  
+  
+ 
+  
+
+    
+
+
+  
+
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
